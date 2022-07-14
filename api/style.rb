@@ -27,10 +27,9 @@ Handler = Proc.new do |req, res|
         if format == 'json' || !format || format == 'csl'
           res['Content-Type'] = 'application/json; charset=utf-8'
           res.body = JSON.generate(parsed)
-          return
+        else
+          res['Content-Type'] = 'text/plain; charset=utf-8'
+          res.body = parsed
         end
-
-        res['Content-Type'] = 'text/plain; charset=utf-8'
-        res.body = parsed
 end
 
