@@ -14,10 +14,10 @@ Handler = Proc.new do |req, res|
         end
 
         ## Get the 'format' parameter from the request query string
-        style = req.query()['format']
+        style = req.query()['format'] || 'csl'
 
 
-        parsed = AnyStyle.parse(body,{format: style || 'csl'})
+        parsed = AnyStyle.parse(body,:style)
 
 
         res.status = 200
