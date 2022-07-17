@@ -22,6 +22,8 @@ Handler = Proc.new do |req, res|
         pp req.query
         pp req.query['format']
         pp req.query()['format']
+        pp req.query_string
+        pp req.query_string()
         # parsed = AnyStyle.parse(body,:style)
 
 
