@@ -14,16 +14,8 @@ Handler = Proc.new do |req, res|
         end
 
         ## Get the 'format' parameter from the request query string
-        style = req.query()['format'] || 'csl'
+        style =/format=(\w+\b)/.match(req.query_string)[1]
 
-        pp style
-        pp :style
-        pp req.query()
-        pp req.query
-        pp req.query['format']
-        pp req.query()['format']
-        pp req.query_string
-        pp req.query_string()
         # parsed = AnyStyle.parse(body,:style)
 
 
