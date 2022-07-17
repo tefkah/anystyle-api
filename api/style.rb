@@ -18,6 +18,10 @@ Handler = Proc.new do |req, res|
 
         pp style
         pp :style
+        pp req.query()
+        pp req.query
+        pp req.query['format']
+        pp req.query()['format']
         # parsed = AnyStyle.parse(body,:style)
 
 
