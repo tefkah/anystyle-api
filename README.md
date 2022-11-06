@@ -4,6 +4,7 @@ Super Simple API for [Anystyle](https://github.com/inukshuk/anystyle) to be host
 
 
 Use the button below to host it yourself
+
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/project?template=https://github.com/tefkah/anystyle-api)
 
 
