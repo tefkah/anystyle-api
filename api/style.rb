@@ -5,7 +5,7 @@ require 'json'
 
 Handler = Proc.new do |req, res|
 
-        if !body
+        if !req.body()
             res.status = 401
             res['Content-type']= 'text/plain'
             res.body= "Hey you didn't send anything dummy"
