@@ -5,7 +5,7 @@ require 'json'
 
 Handler = Proc.new do |req, res|
         ## Fucking ruby sets the encoding to ASCII for some reason
-        body = req.body().force_encoding('UTF-8')
+        body = req.body()#.force_encoding('UTF-8')
         if !body
             res.status = 401
             res['Content-type']= 'text/plain'
