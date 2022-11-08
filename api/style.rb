@@ -15,7 +15,7 @@ Handler = Proc.new do |req, res|
         body = req.body().force_encoding('UTF-8')
 
         ## Get the 'format' parameter from the request query string
-        style =/format=(\w+\b)/.match(req.query_string)[1]
+        style = req.query_string ? /format=(\w+\b)/.match(req.query_string)[1] : ''
 
         # parsed = AnyStyle.parse(body,:style)
 
